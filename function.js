@@ -54,5 +54,28 @@ export function caesarCipher (words,cipher)
      }
      )
      return result.join("");
-    // per 'char' move forward based on 'cipher'
+    
+}
+
+export function analyzeArray (array)
+{
+    // Array in
+    // create an object for ave, min, max, length
+    let sum = 0;
+
+    for(let i = 0; i < array.length; i++)
+    {
+      sum = sum + array[i];
+    }
+
+    const average = sum / array.length;
+
+    const max = Math.max(...array);
+
+    const min = Math.min(...array);
+
+    const length = array.length;
+
+    return {average, min, max, length};
+
 }
